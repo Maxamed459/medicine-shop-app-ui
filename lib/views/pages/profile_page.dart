@@ -15,6 +15,7 @@ class ProfilePage extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
         ),
       ),
+      body: Column(children: [Container()]),
     );
   }
 }
