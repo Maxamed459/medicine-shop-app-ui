@@ -77,26 +77,17 @@ class HomePage extends StatelessWidget {
                           color: Colors.white70,
                           borderRadius: BorderRadius.circular(50),
                         ),
-                        child: Center(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
                           child: TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               hintText: "Upload your prescription",
-                              hintStyle: TextStyle(color: Colors.black),
-                              prefixIcon: Icon(
-                                Icons.search,
+                              hintStyle: TextStyle(
                                 color: Colors.black,
+                                fontSize: 20,
                               ),
-                              suffixIcon: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Icon(
-                                  Icons.file_upload_outlined,
-                                  color: Colors.white,
-                                ),
-                              ),
+                              suffixIcon: Icon(Icons.cloud_upload_outlined),
                             ),
                           ),
                         ),
@@ -112,53 +103,51 @@ class HomePage extends StatelessWidget {
                 left: 20.0,
                 right: 20.0,
               ),
-              child: Container(
-                child: Column(
-                  spacing: 10,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Categories",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
+              child: Column(
+                spacing: 10,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Categories",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
-                        Text(
-                          "See All",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                          ),
+                      ),
+                      Text(
+                        "See All",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
                         ),
-                      ],
-                    ),
-                    Row(
-                      spacing: 10,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CircleCardWidget(
-                          image: 'assets/images/me1.jpg',
-                          title: 'Capsule',
-                        ),
-                        CircleCardWidget(
-                          image: 'assets/images/me2.jpg',
-                          title: 'Syrup',
-                        ),
-                        CircleCardWidget(
-                          image: 'assets/images/me5.jpg',
-                          title: 'Tablets',
-                        ),
-                        CircleCardWidget(
-                          image: 'assets/images/me4.jpg',
-                          title: 'Eye drop',
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    spacing: 10,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CircleCardWidget(
+                        image: 'assets/images/me1.jpg',
+                        title: 'Capsule',
+                      ),
+                      CircleCardWidget(
+                        image: 'assets/images/me2.jpg',
+                        title: 'Syrup',
+                      ),
+                      CircleCardWidget(
+                        image: 'assets/images/me5.jpg',
+                        title: 'Tablets',
+                      ),
+                      CircleCardWidget(
+                        image: 'assets/images/me4.jpg',
+                        title: 'Eye drop',
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
             Padding(
